@@ -1,0 +1,34 @@
+﻿@model List<WebProject.data.models.Pet>
+
+           <header><h1><font color="blue">Take a Look at our Avaialble Animals for Adoption</font></h1></header>
+
+<a href="Home/AddShelter"  class="btn btn-danger"><span class="glyphicon glyphicon-star"></span> Add your Shelter!</a>
+<a href="Home/AddPet" class="btn btn-success"><span class="glyphicon glyphicon-heart"></span> Add a Pet</a>
+
+<body background="http://4.bp.blogspot.com/-wCOK-bvzG4U/T0zHhL4b8LI/AAAAAAAAZ2g/w1Vw8YA5Nxw/s1600/Best-top-wallpapers-hd-psuperos-best-top-backgrounds-beautiful-05.jpg">
+
+    <div class=" table-responsive">
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th><h1><font color="cyan">Name</font></h1></th>
+                <th><h1><font color="cyan">Picture</font></h1></th>
+                <th><h1><font color="cyan">Age</font></h1></th>
+                <th><h1><font color="cyan">Breed</font></h1></th>
+                <th><h1><font color="cyan">ShelterID</font></h1></th>
+            </tr>
+            @foreach (var temp in Model)
+            {
+                <tr>
+                    <td><font color="Chartreuse"><font size="6">@temp.Name<a href="/Home/AdoptPet/@temp.Id" class="btn btn-danger">Adopt</a></font></font></td>
+                    <td><img src="@temp.Picture" alt="Pic of an Animal for adoption" height="200px" width="200px"></td>
+                    <td><font color="blue"><font size="6">@temp.Age</font></font></td>
+                    <td><font size="6">@temp.Breed</font></td>
+                    <td><font color="dark-blue"><font size="6">@temp.ShelterId</font></font></td>
+                </tr>
+            }
+        </table>
+    </div>
+    
+
+</body>
+

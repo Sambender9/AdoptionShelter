@@ -1,0 +1,28 @@
+﻿@model AdoptionShelter.Models.AddEditVM
+@{
+    ViewBag.Title = "AddPet";
+}
+<body background="http://www.ezwebrus.com/wallpapers/animal/giraffe.jpg">
+    <h2><font color="white">Please add your pet in the boxes below</font></h2>
+    <form method="post">
+        <font style="color: white; font-size: 1.5em;" />
+        @*@Html.HiddenFor(x=> x.Pet.Id)*@
+        Enter Name
+        @Html.EditorFor(x => x.Pet.Name)<br />
+        Enter Picture URL
+        @Html.EditorFor(x => x.Pet.Picture)<br />
+        Enter Shelter ID
+        @Html.EditorFor(x => x.Pet.ShelterId)<br />
+        Enter Age
+        @Html.EditorFor(x => x.Pet.Age)<br />
+        Enter Breed
+        @Html.EditorFor(x => x.Pet.Breed)<br />
+        <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
+    </form>
+    @if (Model.ButtonMessage == "Submit Changes")
+    {
+        <form method="post">
+            <input class="btn btn-danger" type="submit" value="Delete" />
+        </form>
+    }
+</body>

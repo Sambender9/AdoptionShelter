@@ -1,0 +1,31 @@
+﻿@model List<WebProject.data.models.Shelter>
+
+<header><h1><font color="Chartreuse">Shelters!</font></h1></header>
+
+@*<a href="Home/AddShelter" class="btn btn-danger"><span class="glyphicon glyphicon-star"></span> Add your Shelter!</a>
+<a href="Home/AddPet" class="btn btn-success"><span class="glyphicon glyphicon-heart"></span> Add a Pet</a>*@
+
+<body background="http://cdn.wallwuzz.com/uploads/animal-desktop-wallpaper-wallwuzz-hd-wallpaper-1394.jpg">
+    <div class=" table-responsive">
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th><h1><font color="cyan">Name</font></h1></th>
+            <th><h1><font color="cyan">Picture</font></h1></th>
+            <th><h1><font color="cyan">Address</font></h1></th>
+
+        </tr>
+        @foreach (var temp in Model)
+        {
+            <tr>
+                <td><font color="Chartreuse"><font size="6">@temp.Name<a href="/Home/Shelter/@temp.Id" class="btn btn-danger">Delete</a></font></font></td> 
+                
+                <td><img src="@temp.ShelterPic" alt="Pic of an Animal for adoption" height="200px" width="200px"></td>
+                <td><font color="blue"><font size="6">@temp.Address</font></font></td>
+
+            </tr>
+        }
+    </table>
+    </div>
+    <a href="/Home/Shelter"></a>
+</body>
+
