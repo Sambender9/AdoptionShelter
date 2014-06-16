@@ -19,16 +19,14 @@
             @foreach (var temp in Model)
             {
                 <tr>
-                    <td><font color="Chartreuse"><font size="6">@temp.Name<a href="/Home/AdoptPet/@temp.Id" class="btn btn-danger">Adopt</a></font></font></td>
-                    <td><img src="@temp.Picture" alt="Pic of an Animal for adoption" height="200px" width="200px"></td>
-                    <td><font color="blue"><font size="6">@temp.Age</font></font></td>
+                    <td><font color="Chartreuse"size="6">@temp.Name<br/><a href="/Home/AdoptPet/@temp.Id" class="btn btn-danger">Adopt</a></font></td>
+                    <td><img src="@temp.Picture" alt="Pic of an Animal for adoption" height="200" width="200"></td>
+                    <td><font color="blue" size="6">@temp.Age</font></td>
                     <td><font size="6">@temp.Breed</font></td>
-                    <td><font color="dark-blue"><font size="6">@temp.ShelterId</font></font></td>
+                    <td><font color="dark-blue" size="6">@temp.ShelterId</font></td>
                 </tr>
             }
         </table>
     </div>
-    
-
 </body>
 

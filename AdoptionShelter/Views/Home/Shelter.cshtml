@@ -12,16 +12,13 @@
             <th><h1><font color="cyan">Name</font></h1></th>
             <th><h1><font color="cyan">Picture</font></h1></th>
             <th><h1><font color="cyan">Address</font></h1></th>
-
         </tr>
         @foreach (var temp in Model)
         {
             <tr>
-                <td><font color="Chartreuse"><font size="6">@temp.Name<a href="/Home/Shelter/@temp.Id" class="btn btn-danger">Delete</a></font></font></td> 
-                
-                <td><img src="@temp.ShelterPic" alt="Pic of an Animal for adoption" height="200px" width="200px"></td>
-                <td><font color="blue"><font size="6">@temp.Address</font></font></td>
-
+                <td><font color="Chartreuse"size="6">@temp.Name<br/><a href="/Home/Shelter/@temp.Id" class="btn btn-danger">Delete</a></font></td> 
+                <td><img src="@temp.ShelterPic" alt="Pic of an Animal for adoption" height="200" width="200"/></td>
+                <td><font color="blue" size="6">@temp.Address</font></td>
             </tr>
         }
     </table>

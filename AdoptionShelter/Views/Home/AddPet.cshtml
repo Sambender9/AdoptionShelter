@@ -7,15 +7,15 @@
     <form method="post">
         <font style="color: white; font-size: 1.5em;" />
         @*@Html.HiddenFor(x=> x.Pet.Id)*@
-        Enter Name
+        Enter Name<br/>
         @Html.EditorFor(x => x.Pet.Name)<br />
-        Enter Picture URL
+        Enter Picture URL<br/>
         @Html.EditorFor(x => x.Pet.Picture)<br />
-        Enter Shelter ID
+        Enter Shelter ID<br />
         @Html.EditorFor(x => x.Pet.ShelterId)<br />
-        Enter Age
+        Enter Age<br />
         @Html.EditorFor(x => x.Pet.Age)<br />
-        Enter Breed
+        Enter Breed<br />
         @Html.EditorFor(x => x.Pet.Breed)<br />
         <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
     </form>

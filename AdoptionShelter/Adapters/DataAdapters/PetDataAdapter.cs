@@ -10,7 +10,7 @@ namespace AdoptionShelter.Adapters.DataAdapters
 {
     public class PetDataAdapter : IPetAdapter
     {
-        public List<WebProject.data.models.Pet> GetListPets()
+        public List<Pet> GetListPets()
         {
             List<Pet> model = new List<Pet>();
             using (ApplicationDbContext db = new ApplicationDbContext())
@@ -19,12 +19,12 @@ namespace AdoptionShelter.Adapters.DataAdapters
             }
             return model;
         }
-        public List<WebProject.data.models.Shelter> GetListShelters()
+        public List<Shelter> GetListShelters()
         {
             List<Shelter> model = new List<Shelter>();
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
-             model = db.Shelters.ToList();
+                model = db.Shelters.ToList();
             }
             return model;
         }
@@ -46,7 +46,7 @@ namespace AdoptionShelter.Adapters.DataAdapters
                 var sentback = db.SaveChanges();
             }
         }
-        public void DeltePet(int Id)
+        public void DeletePet(int Id)
         {
             using (ApplicationDbContext db = new ApplicationDbContext())
             {

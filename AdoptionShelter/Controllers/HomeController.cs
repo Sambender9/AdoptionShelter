@@ -29,7 +29,7 @@ namespace AdoptionShelter.Controllers
             List<Pet> pets = _adapter.GetListPets();
             return View(pets);
         }
-        public ActionResult Pets()//Just use the homepage instead???
+        public ActionResult Pets()//Just use the index instead???
         {
             var model = _adapter.GetListPets();
             return View(model);

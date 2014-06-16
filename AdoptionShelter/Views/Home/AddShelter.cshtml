@@ -4,15 +4,15 @@
 }
 <body background="http://3.bp.blogspot.com/_2UbsSBz9ckE/SyQaB5vl4UI/AAAAAAAAAmA/6AjuRmH0SAc/s1600/shark_profile_hd_wallpaper.jpg">
 
-    <h2><font color="white">Please add your Shelter in the form below</font></h2>
+    <h2><font color="darkblue">Please add your Shelter in the form below</font></h2>
     <form method="post">
-        <font style="color: white; font-size: 1.5em;" />
+        <font style="color: darkblue; font-size: 1.5em;" />
         @*@Html.HiddenFor(x=> x.Shelter.Id)*@
-        Enter Name
+        Enter Name<br />
         @Html.EditorFor(x => x.Shelter.Name)<br/>
-        Enter Picture URL
+        Enter Picture URL<br />
         @Html.EditorFor(x => x.Shelter.ShelterPic)<br/>
-        Enter Shelter Address
+        Enter Shelter Address<br />
         @Html.EditorFor(x => x.Shelter.Address)<br />
        
         <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />

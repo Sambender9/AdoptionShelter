@@ -18,7 +18,5 @@ namespace AdoptionShelter.Adapters.Interfaces
         Pet GetPetByName(string Pet);
         void AdoptPet(int id);
         void DeleteShelter(int id);
-
-       
     }
 }
